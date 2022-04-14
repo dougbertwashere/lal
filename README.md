@@ -30,3 +30,8 @@ To run the image in a container with parameters, see the "start.sh" script
 
 `docker run --name lal-$i -d -h lal-$ip --restart always --cap-add CAP_NET_ADMIN dougbertwhy/la`
 
+
+
+Ref
+
+https://dev.to/s1ntaxe770r/how-to-setup-ssh-within-a-docker-container-i5i

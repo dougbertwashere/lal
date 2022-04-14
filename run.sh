@@ -16,20 +16,26 @@ echo "IP for this instance $ip"
 /sbin/ip r del $(/sbin/ip route show default)
 /sbin/ip r a default via $gw
 
-/usr/sbin/dropbear
 
-cd /home/lal
+echo "alias '..'='cd ..'" >> /root/.bash_aliases
+echo "alias 'll'='ls -al'" >> /root/.bash_aliases
+chown support:root .bash_aliases
 
+
+cd /home/support
 echo "alias '..'='cd ..'" >> .bash_aliases
 echo "alias 'll'='ls -al'" >> .bash_aliases
-chown lal:lal .bash_aliases
+chown support:root .bash_aliases
 
 mkdir .ssh
-chown lal:lal .ssh
+chown support:root .ssh
 chmod 700 .ssh
 cd .ssh
-ssh-keygen -b 1024 -t dsa -f /home/lal/.ssh/id_dsa
-chown lal:lal id_dsa id_dsa.pub
+ssh-keygen -N "" -b 1024 -t dsa -f /home/support/.ssh/id_dsa
+chown support:root id_dsa id_dsa.pub
+
+service dbus start
+service ssh start
 
 
 sleep infinity
