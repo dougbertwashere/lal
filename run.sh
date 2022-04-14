@@ -18,4 +18,18 @@ echo "IP for this instance $ip"
 
 /usr/sbin/dropbear
 
+cd /home/lal
+
+echo "alias '..'='cd ..'" >> .bash_aliases
+echo "alias 'll'='ls -al'" >> .bash_aliases
+chown lal:lal .bash_aliases
+
+mkdir .ssh
+chown lal:lal .ssh
+chmod 700 .ssh
+cd .ssh
+ssh-keygen -b 1024 -t dsa -f /home/lal/.ssh/id_dsa
+chown lal:lal id_dsa id_dsa.pub
+
+
 sleep infinity
