@@ -16,8 +16,9 @@ add a 2nd NIC (on mobo, card or USB) for 2nd interface, connect to same physical
   
 2) Add a subnet to the docker0 bridge
 
-     `sudo ip a add <subnet> dev docker0`    #  ex subnet:  10.131.110.65/27
+     `sudo ip a add <subnet> dev docker0`    #  ex subnet:  10.131.110.65/26
   
+     this example allow for 64 addresses and 62 hosts
   
 Then for docker image, build the image and launch the container
   
