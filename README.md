@@ -17,7 +17,8 @@ add a 2nd NIC (on mobo, card or USB) for 2nd interface, connect to same physical
 
      `sudo ip a add <subnet> dev docker0`    #  ex subnet:  10.131.110.65/27
   
-Then for docker image, built the image and launch the container
+  
+Then for docker image, build the image and launch the container
   
   
 To generate the image 
