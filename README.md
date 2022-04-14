@@ -7,6 +7,7 @@ On host:
 with docker installed, then the docker0 bridge is installed as default
 
 Host connects its NIC to a physical switch
+
 add a 2nd NIC (on mobo, card or USB) for 2nd interface, connect to same physical switch
 
 1) Add 2nd IF to the docker0 bridge
