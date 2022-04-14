@@ -20,5 +20,11 @@ add a 2nd NIC (on mobo, card or USB) for 2nd interface, connect to same physical
 Then for docker image, built the image and launch the container
   
   
-make 
-docker run -it -rm --cap-add CAP_NETWORK 
+To generate the image 
+
+`make` 
+
+To run the image in a container with parameters, see the "start.sh" script
+
+`docker run --name lal-$i -d -h lal-$ip --restart always --cap-add CAP_NET_ADMIN dougbertwhy/la`
+
