@@ -13,7 +13,7 @@ add a 2nd NIC (on mobo, card or USB) for 2nd interface, connect to same physical
      `brctl addif docker0  <interface ID>`
   
 2) Add a subnet to the docker0 bridge
-     ip a dev docker0  <subnet>    #  10.131.110.65/27
+     `ip a dev docker0  <subnet>`    #  10.131.110.65/27
   
 Then for docker image, built the image and launch the container
   
