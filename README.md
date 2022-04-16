@@ -1,5 +1,6 @@
-# lal
-Dockerfile for lunch and learn
+# lal-ansible
+Dockerfile for lunch and learn to show simple use of ansible for Hughes development use
+ansible, docker and portainer are shown
 
 
 On host:
