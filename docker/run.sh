@@ -7,7 +7,7 @@ n=$(ip -o a show dev eth0 | fgrep 172 | awk '{print $4}' | cut -d. -f 4 | cut -d
 (( n += 64 ))
 
 ip=$myNet.$n
-suffix=27
+suffix=26			# Must match the subnet on the host
 gw=$myNet.65
 
 echo "IP for this instance $ip"

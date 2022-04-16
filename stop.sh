@@ -2,7 +2,7 @@
 
 names=
 
-for i in {3..60}
+for i in {3..62}
 do
 
 	names="$names lal-$i"

@@ -20,7 +20,7 @@ done
 }
 
 do_real () {
-for i in {3..60}
+for i in {3..62}
 do
 	n=$(( $i + 64 ))
 
