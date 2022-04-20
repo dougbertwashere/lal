@@ -27,9 +27,6 @@ echo "alias '..'='cd ..'" >> .bash_aliases
 echo "alias 'll'='ls -al'" >> .bash_aliases
 chown support:root .bash_aliases
 
-mkdir .ssh
-chown support:root .ssh
-chmod 700 .ssh
 cd .ssh
 ssh-keygen -N "" -b 1024 -t dsa -f /home/support/.ssh/id_dsa
 chown support:root id_dsa id_dsa.pub

@@ -1,0 +1,10 @@
+ansible_ssh_password: "{{ lookup('vars', 'support_passwd', default='jerich0') }}"
+
+ansible_become: yes
+ansible_become_method: su
+ansible_become_user: root
+
+ansible_user: support
+ansible_become_pass: "{{ lookup('vars', 'root_passwd', default='jerich0') }}"
+
+ansible_host_key_checking: no

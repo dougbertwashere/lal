@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  gather_facts: false
+
+  vars:
+    - include_role:
+        name: support_ssh_access
+
+    - include_role:
+        name: install-bpytop
+
+  tasks:
+    - include_role:
+        name: install-bpytop

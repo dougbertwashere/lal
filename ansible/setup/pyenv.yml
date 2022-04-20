@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Install pyenv
+      become: false
+      shell:  curl https://pyenv.run | bash
+      args:
+        executable: /bin/bash
+        warn: no
+

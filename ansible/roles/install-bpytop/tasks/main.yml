@@ -1,0 +1,33 @@
+#- debug: var=ansible_facts
+#      - python-pip 
+
+- name: install tools needed by bpytop
+  apt: 
+    name: 
+      - build-essential
+      - python3-apt-dbg
+      - python3-apt
+      - python-apt-doc
+      - python-apt-common
+      - python-dev 
+      - python3-dev 
+      - python3-pip
+      - git
+    state: present
+    update_cache: yes 
+
+- name: Install psutil
+  pip:
+    name: psutil==5.7.2
+
+- name: Clone/pull bpytop repo
+  git: 
+    repo: 'https://github.com/aristocratos/bpytop.git'
+    dest: /home/{{ remote_user }}/dev/bpytop
+
+
+- name:  Install
+  community.general.make:
+    chdir: /home/{{ remote_user }}/dev/bpytop
+    target: install
+  become: yes
